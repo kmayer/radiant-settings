@@ -7,6 +7,7 @@ class Admin::SettingsController < ApplicationController
   
   def index
     @settings = Radiant::Config.find_all_as_tree
+    @template_name = 'index' # for Admin::RegionsHelper
   end
   
   def new
